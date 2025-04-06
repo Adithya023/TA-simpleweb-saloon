@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thinura Adithya Saloon | Modern Elegance</title>
+  <meta name="description" content="Experience avant-garde beauty and style at Thinura Adithya Saloon. Elevate your look with our bespoke services.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <section id="hero" class="relative h-[100vh] overflow-hidden">
+    <div id="hero-canvas"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-5xl font-extrabold mb-6 drop-shadow-lg">Thinura Adithya Saloon</h1>
+        <p class="text-xl mb-8">Redefining beauty with modern elegance.</p>
+        <a href="#services" class="bg-green-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-green-700 transition-colors">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8 text-green-500">Our Vision</h2>
+      <p class="text-lg leading-relaxed mb-12">
+        At Thinura Adithya Saloon, we believe in crafting experiences that transcend traditional beauty standards. Our approach is rooted in innovation, personalized care, and a deep understanding of contemporary styles. We're dedicated to empowering our clients with confidence and a sense of refined elegance.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Expert Stylists</h3>
+          <p class="text-gray-300">Our team comprises industry-leading stylists and beauticians who are passionate about their craft and committed to continuous learning.</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Premium Products</h3>
+          <p class="text-gray-300">We utilize only the finest products to ensure optimal results and the health of your hair and skin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 px-6 bg-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12 text-green-500">Our Exclusive Services</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
+          <h3 class="text-2xl font-semibold mb-4">Artistic Hair Design</h3>
+          <p class="text-gray-300 mb-6">Innovative cuts, coloring, and styling tailored to your unique aesthetic.</p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Precision Cuts</li>
+            <li>Balayage & Highlights</li>
+            <li>Custom Styling</li>
+          </ul>
+        </div>
+        <div class="bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
+          <h3 class="text-2xl font-semibold mb-4">Advanced Skin Therapy</h3>
+          <p class="text-gray-300 mb-6">Rejuvenating treatments designed to enhance your natural radiance.</p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Hydrating Facials</li>
+            <li>Chemical Peels</li>
+            <li>Microdermabrasion</li>
+          </ul>
+        </div>
+        <div class="bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
+          <h3 class="text-2xl font-semibold mb-4">Luxury Nail Artistry</h3>
+          <p class="text-gray-300 mb-6">Exquisite manicures and pedicures with a focus on detail and design.</p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Gel Extensions</li>
+            <li>Custom Nail Art</li>
+            <li>Spa Pedicures</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="py-24 px-6 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12 text-green-500">Virtual Consultation</h2>
+      <p class="text-lg leading-relaxed mb-8">
+        Experience our services from the comfort of your home with our virtual consultation tool. Upload your photo and explore various styles and looks.
+      </p>
+      <button class="bg-green-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-green-700 transition-colors">Try Virtual Consultation</button>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12 text-green-500">Connect With Us</h2>
+      <form class="space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white">
+        <input type="email" placeholder="Your Email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white">
+        <textarea placeholder="Your Message" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white h-36"></textarea>
+        <button type="submit" class="bg-green-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-green-700 transition-colors">Send Message</button>
+      </form>
+      <div class="mt-12">
+        <p class="text-gray-300">Or call us at: +1 (555) 123-4567</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-8 text-center">
+    <p>&copy; 2025 Thinura Adithya Saloon. All rights reserved.</p>
+    <div class="mt-4">
+      <a href="#" class="mx-3 hover:text-green-500">Facebook</a>
+      <a href="#" class="mx-3 hover:text-green-500">Instagram</a>
+      <a href="#" class="mx-3 hover:text-green-500">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    // Three.js/p5.js background
+    function setup() {
+      createCanvas(windowWidth, windowHeight, WEBGL);
+    }
+
+    function draw() {
+      background(0);
+      rotateX(frameCount * 0.01);
+      rotateY(frameCount * 0.01);
+      box(100);
+    }
+    windowResized = ()=>{
+      resizeCanvas(windowWidth, windowHeight);
+    }
+    new p5();
+  </script>
+</body>
+</html>
